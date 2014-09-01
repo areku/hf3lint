@@ -14,7 +14,7 @@ install:
     - "pip install ."
 
 script: 
-    - python hf3lint.py -f term share/bc_000_nocorrect.xml 
-    - python hf3lint.py -f term share/bc_000.xml 
-    - python hf3lint.py -f term share/bc_001.xml 
+    - python hf3lint.py -f term share/bc_000_notcorrect.xml
+    - python hf3lint.py -f term share/bc_000_correct.xml 
+    - python hf3lint.py -f term share/bc_001_correct.xml 
     - python hf3lint.py -f term share/hf3_000.xml
