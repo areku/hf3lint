@@ -1,0 +1,19 @@
+language: python
+python: 
+  - "2.6"
+  - "2.7"
+  - "3.0"
+  - "3.1"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "pypy"
+
+install:
+    - "pip install ."
+
+script: 
+    - python -f term share/bc_000_nocorrect.xml 
+    - python -f term share/bc_000.xml 
+    - python -f term share/bc_001.xml 
+    - python -f term share/hf3_000.xml
