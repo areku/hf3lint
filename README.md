@@ -2,7 +2,7 @@ hf3lint
 =======
 
 [![Documentation Status](https://readthedocs.org/projects/hf3lint/badge/?version=latest)](https://readthedocs.org/projects/hf3lint/?badge=latest)
-[![Build Status](https://travis-ci.org/CognitionGuidedSurgery/hf3lint.svg?branch=master)](https://travis-ci.org/CognitionGuidedSurgery/hf3lint)
+[![Build Status](https://travis-ci.org/areku/hf3lint.svg?branch=master)](https://travis-ci.org/areku/hf3lint)
 [![Downloads](https://pypip.in/download/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
 [![Latest Version](https://pypip.in/version/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
 [![Supported Python versions](https://pypip.in/py_versions/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
