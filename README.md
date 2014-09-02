@@ -1,7 +1,6 @@
 hf3lint
 =======
 
-[![Documentation Status](https://readthedocs.org/projects/hf3lint/badge/?version=latest)](https://readthedocs.org/projects/hf3lint/?badge=latest)
 [![Build Status](https://travis-ci.org/areku/hf3lint.svg?branch=master)](https://travis-ci.org/areku/hf3lint)
 [![Downloads](https://pypip.in/download/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
 [![Latest Version](https://pypip.in/version/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
@@ -17,7 +16,19 @@ hf3lint
 
 ## About
 
+**hf3lint** is a lint tool for Hiflow3 files. It checks the xml files for correct types and formatted values 
+and gives hints on bad configuration of parameters.
 
 
-## Installation, Getting Started and Documentation 
+## Installation
 
+Just via the Cheeseshop:
+
+    $ pip install hf3lint [--user]
+
+
+## Getting Started  
+
+Call hf3lint via the command line:
+
+    $ hf3lint -h 
