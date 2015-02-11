@@ -27,6 +27,7 @@ __date__ = "2014-08-27"
 __version__ = "0.1-rc"
 
 import re
+import lxml.etree as ET
 
 REGEX_NATURAL = re.compile(r'^\d+$')
 REGEX_INTEGER = re.compile(r'^[+-]?\d+$')
@@ -402,14 +403,18 @@ def read_xml(filename):
     :returns: a dict structure
     :rtype: dict
     """
-    import lxml.etree
 
-    with open(filename) as fp:
-        parser = lxml.etree.XMLParser(remove_blank_text=True,
-                                      remove_pis=True,
-                                      remove_comments=True)
-        tree = lxml.etree.parse(fp, parser=parser)
-        return dictionfy(tree.getroot())
+    if isinstance(filename, str):
+        with open(filename) as fp:
+            content = fp.read()
+    else:
+        content = filename.read()
+
+    parser = ET.XMLParser(remove_blank_text=True,
+                          remove_pis=True,
+                          remove_comments=True)
+    tree = ET.fromstring(content, parser = parser)
+    return dictionfy(tree)
 
 
 class ReportPrinter(object):
@@ -463,22 +468,19 @@ class ReportPrinter(object):
 
     def _print_json(self, report, errors=True, warnings=True, hints=True):
         import json
+
         print(json.dumps(report))
 
     def _print_xml(self, report, errors=True, warnings=True, hints=True):
-
-        import lxml.etree
-
-        root = lxml.etree.Element("report")
-
+        root = ET.Element("report")
         for r in report:
-            entry = lxml.etree.SubElement(root, "entry")
+            entry = ET.SubElement(root, "entry")
             entry.attrib["level"] = r.level
             entry.attrib["number"] = str(r.number)
             entry.attrib["message"] = r.message
             entry.attrib["path"] = r.path
 
-        print(lxml.etree.tostring(root, encoding="utf-8", pretty_print=True, standalone=True))
+        print(ET.tostring(root, encoding="utf-8", pretty_print=True, standalone=True))
 
     def _print_csv(self, report, errors=True, warnings=True, hints=True, delimiter="\t"):
         import csv, sys

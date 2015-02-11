@@ -1,0 +1,63 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: monospace;
+            font-size: 8pt;
+        }
+
+        table {
+            font-family: monospace;
+            font-size: 8pt;
+        }
+
+        thead tr {
+            border-bottom: 1px black solid;
+            background: #ddd;
+        }
+
+        tbody {
+            border-bottom: 1px black solid;
+        }
+
+        .levelE {
+            background: lightcoral;
+        }
+
+        .levelI {
+            background: lightblue;
+        }
+
+        .level {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+{% for filename, messages in results.iteritems() %}
+<h1>{{filename}}</h1>
+<table>
+    <thead>
+    <tr>
+        <th>level</th>
+        <th>message</th>
+        <th>path</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for r in messages %}
+    <tr class="level{{r.level}}">
+        <td class="level">{{ r.level }}</td>
+        <td class="message">{{ r.message}}</td>
+        <td class="path">{{ r.path }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+
+</table>
+{% endfor %}
+
+</body>
+</html>

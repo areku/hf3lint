@@ -1,0 +1,36 @@
+<html>
+<head>
+
+</head>
+<body>
+<h1>Restflow</h1>
+
+<form action="check" method="post" enctype="multipart/form-data">
+    <p><label for="file">Upload your Hiflow³ configuration</label></p>
+
+    <p>
+        <input type="file" name="file" id="file"/>
+    </p>
+
+    <p><label>Format</label>
+
+        <label><input type="radio" name="format" value="html"/>
+            HTML</label>
+
+        <label>
+            <input type="radio" name="format" value="json"/>
+            JSON
+        </label>
+        <label>
+            <input type="radio" name="format" value="CSV"/>
+            CSV
+        </label>
+
+    </p>
+
+    <p>
+        <input type="submit" name="submit">
+    </p>
+</form>
+</body>
+</html>

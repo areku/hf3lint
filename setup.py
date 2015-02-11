@@ -5,7 +5,7 @@ import hf3lint
 setup(
     name='hf3lint',
     version=hf3lint.__version__,
-    modules=['hf3lint'],
+    py_modules=['hf3lint'],
     url='http://github.com/areku/hf3lint',
     license='GPL 3',
     author='Alexander Weigl',
