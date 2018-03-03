@@ -2,12 +2,12 @@ hf3lint
 =======
 
 [![Build Status](https://travis-ci.org/areku/hf3lint.svg?branch=master)](https://travis-ci.org/areku/hf3lint)
-[![Downloads](https://pypip.in/download/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
-[![Latest Version](https://pypip.in/version/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
-[![Supported Python versions](https://pypip.in/py_versions/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
-[![Development Status](https://pypip.in/status/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
-[![Download format](https://pypip.in/format/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
-[![License](https://pypip.in/license/hf3lint/badge.svg)](https://pypi.python.org/pypi/hf3lint/)
+[![Downloads](https://img.shields.io/pypi/dm/hf3lint.svg
+[![Latest Version](https://img.shields.io/pypi/v/hf3lint.svg
+[![Supported Python versions](https://img.shields.io/pypi/pyversions/hf3lint.svg
+[![Development Status](https://img.shields.io/pypi/status/hf3lint.svg
+[![Download format](https://img.shields.io/pypi/format/hf3lint.svg
+[![License](https://img.shields.io/pypi/l/hf3lint.svg
 
     Author: Alexander Weigl <Alexander.Weigl@student.kit.edu>
     License: GPL v3
